@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,300&display=swap");
+
+:root {
+  --ff-default: "Roboto", sans-serif;
+
+  --text-sm: 1rem;
+  --text-base: 1.125rem;
+  --text-md: 1.5rem;
+  --text-lg: 2.25rem;
+  --text-xl: 3rem;
+
+  --tracking-wide: 0.004em;
+
+  --text-white: #f9faf8;
+  --text-dark-blue: #1f2937;
+  --bg-dark-blue: #1f2937;
+  --bg-light-blue: #3882f6;
+  --bg-gray: #e5e7eb;
+
+  --spacing-1: 0.5rem;
+  --spacing-2: 1.125rem;
+  --spacing-3: 1.5rem;
+  --spacing-4: 3rem;
+
+  --breakpoint-tablet: 62em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-default);
+  font-size: var(--text-base);
+  color: var(--text-dark-blue);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a,
+button {
+  font-family: inherit;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: var(--text-xl);
+}
+
+h2 {
+  font-size: var(--text-lg);
+}
+
+h3 {
+  font-size: var(--text-md);
+}
+
+@media only screen and (max-width: 62em) {
+  h1 {
+    font-size: var(--text-lg);
+  }
+
+  h2 {
+    font-size: var(--text-md);
+  }
+
+  h3 {
+    font: var(--text-base);
+  }
+}
