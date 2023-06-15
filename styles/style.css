@@ -77,3 +77,38 @@ h3 {
     font: var(--text-base);
   }
 }
+
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.header .header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: clamp(23.4375rem, 100vw, 64rem);
+  margin-inline: auto;
+  padding-block: var(--spacing-2);
+  color: var(--text-white);
+}
+
+.header .header__nav .header__logo {
+  font-size: var(--text-md);
+  font-weight: 700;
+}
+
+.header .header__nav .header__menu-list {
+  display: flex;
+  align-items: center;
+}
+
+.header .header__menu-list .header__menu-item:not(:last-child) {
+  margin-right: var(--spacing-3);
+}
+
+.hero {
+  height: 535px;
+  background-color: var(--bg-dark-blue);
+}
