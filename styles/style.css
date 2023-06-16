@@ -16,13 +16,15 @@
   --bg-dark-blue: #1f2937;
   --bg-light-blue: #3882f6;
   --bg-gray: #e5e7eb;
+  --bg-gray-translucent: rgba(229, 231, 235, 0.4);
 
   --spacing-1: 0.5rem;
   --spacing-2: 1.125rem;
   --spacing-3: 1.5rem;
   --spacing-4: 3rem;
 
-  --breakpoint-tablet: 62em;
+  --rounded: 0.25rem;
+  --rounded-md: 0.5rem;
 }
 
 * {
@@ -45,7 +47,7 @@ ol {
 a,
 button {
   font-family: inherit;
-  color: inherit;
+  color: var(--text-white);
 }
 
 a {
@@ -74,8 +76,33 @@ h3 {
   }
 
   h3 {
-    font: var(--text-base);
+    font-size: var(--text-base);
   }
+
+  p {
+    font-size: var(--text-sm);
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  width: 8.125rem;
+  padding-block: 0.5rem;
+  font-size: inherit;
+  font-weight: 700;
+  border-radius: var(--rounded-md);
+  cursor: pointer;
+}
+
+.button--fill {
+  background-color: var(--bg-light-blue);
+  border: none;
+}
+
+.button--outline {
+  background: transparent;
+  border: 2px solid var(--text-white);
 }
 
 .header {
@@ -109,6 +136,38 @@ h3 {
 }
 
 .hero {
-  height: 535px;
+  padding-block: 10.3125rem 8.3125rem;
+  color: var(--text-white);
   background-color: var(--bg-dark-blue);
+}
+
+.hero .hero__container {
+  display: flex;
+  align-items: center;
+  max-width: 64rem;
+  margin-inline: auto;
+}
+
+.hero .content-container {
+  flex: 1;
+  padding-right: 3.0625rem;
+}
+
+.hero .content-container .text-container {
+  padding-bottom: 0.8125rem;
+}
+
+.hero .hero__container .img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+  width: 100%;
+  max-width: 32.625rem;
+  padding-block: 6.375rem;
+  background-color: var(--bg-gray-translucent);
+}
+
+.hero .img-container p {
+  margin-top: 0.75rem;
 }
